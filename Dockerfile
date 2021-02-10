@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 
 # ===============
 # Alpine packages
@@ -6,7 +6,7 @@ FROM alpine:3.12
 
 RUN apk update \
     && apk add --no-cache py3-pip tini \
-    && apk add --no-cache --virtual build-deps wget git gcc musl-dev python3-dev libffi-dev openssl-dev
+    && apk add --no-cache --virtual build-deps wget git gcc musl-dev python3-dev libffi-dev openssl-dev cargo
 
 # ======
 # Python
